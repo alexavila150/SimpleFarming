@@ -32,7 +32,7 @@ public class GenomeCraftingExtensionAuthoritySystem extends BaseComponentSystem 
      */
     @ReceiveEvent
     public void onRecipeCraftedEvent(OnRecipeCrafted event, EntityRef entity) {
-        EntityRef[] ingredients = event.getIngredients();
+        final EntityRef[] ingredients = event.getIngredients();
         if (ingredients.length != 2) {
             return;
         }

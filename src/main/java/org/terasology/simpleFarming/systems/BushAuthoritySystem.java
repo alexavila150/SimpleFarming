@@ -196,7 +196,7 @@ public class BushAuthoritySystem extends BaseComponentSystem {
      * @return
      */
     public static Map.Entry<String, BushGrowthStage> getGrowthStage(BushDefinitionComponent bushComponent, int index) {
-        return (new ArrayList<>(bushComponent.growthStages.entrySet())).get(Math.min(bushComponent.growthStages.size() - 1, Math.max(0, index)));
+        return new ArrayList<>(bushComponent.growthStages.entrySet())).get(Math.min(bushComponent.growthStages.size() - 1, Math.max(0, index));
     }
 
     /**

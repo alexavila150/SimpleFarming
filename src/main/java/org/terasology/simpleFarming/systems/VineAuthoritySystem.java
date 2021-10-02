@@ -296,10 +296,7 @@ public class VineAuthoritySystem extends BaseComponentSystem {
         }
         Block belowBlock = worldProvider.getBlock(position.add(0,-1,0));
         position.add(0,1,0);
-        if (belowBlock.isPenetrable()) {
-            return false;
-        }
-        return true;
+        return !belowBlock.isPenetrable();
     }
 
     /**
